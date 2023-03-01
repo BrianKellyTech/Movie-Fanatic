@@ -176,3 +176,19 @@ body {
 .next-btn:hover {
     opacity: 1;
 }
+
+/* main footer styling */
+
+.footer-container {
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.footer-content {
+    font-size: 13px;
+    color: white;
+    text-align: center;
+}
