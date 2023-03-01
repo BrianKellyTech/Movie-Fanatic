@@ -15,6 +15,37 @@ app.get('/', (req, res) => {
 
 // local port where app will display
 app.listen(3000, () => {
-    console.log('Server is running on port 3000...')
+    console.log('Express Server is listening on port 3000...')
 })
 
+
+// From Code Louisville demonstration ROUTER
+// import express from 'express'
+
+// const app = express()
+
+// let router = express.Router()
+
+// router.get('/', (req, res) => {
+//     res.send('Any phrase will do')
+// })
+
+// app.use(router)
+
+// app.listen(5000() => {
+//     console.log('express is now listening on port 5000')
+// })
+
+
+// From Code Louisville demonstration APP
+// import express from 'express'
+
+// const app = express()
+
+// app.get('/', (req, res) => {
+//     res.send('Any phrase will do')
+// })
+
+// app.listen(5000() => {
+//     console.log('express is now listening on port 5000')
+// })
