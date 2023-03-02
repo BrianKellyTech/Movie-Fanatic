@@ -33,7 +33,7 @@ body {
 
 /* Navbar Container */
 .navbar-container {
-    width: fit-content;
+    /* width: fit-content; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,9 +43,9 @@ body {
 
 /* Text on Navbar */
 .navbar-message {
+    display: flex;
     color: white;
-    /*padding: 0 60px;*/
-    justify-content: center;
+    padding: 0 60px;
 }
 
 /* Navbar Buttons */
@@ -121,7 +121,7 @@ body {
 /* The inside of the movie container */
 .movie {
     flex: 0 0 auto;
-    width: 18%;
+    width: 19%;
     height: 200px;
     text-align: center;
     margin-right: 10px;

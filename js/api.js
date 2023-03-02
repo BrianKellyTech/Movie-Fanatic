@@ -1,7 +1,7 @@
 //API key from TMDB.org
 let api_key = "9133b11827d7b8a626b0fc37541b0a41";
 
-// Links to  various sections of the TMDB API
+// Below are the links to various sections of the TMDB API
 
 // API movie images
 let img_url = "https://image.tmdb.org/t/p/w500";

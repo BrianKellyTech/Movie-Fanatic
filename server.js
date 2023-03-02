@@ -1,22 +1,30 @@
-// import expresss and path library
+// Express server
 const express = require('express');
 const path = require('path');
+const app = express()
 
-//store public folder path in a separate variable
-let initial_path = path.join(__dirname, "public");
+// Specify static route
+app.use(express.static(__dirname));
 
-let app = express();
-app.use(express.static(initial_path));
-
-// setup home route to send index.html file
+// Setup home route to send index.html file
 app.get('/', (req, res) => {
-    res.sendFile(path.join(initial_path, "index.html"));
+    res.sendFile('/index.html');
 })
 
-// local port where app will display
+// Local port where app will display (localhost:3000)
 app.listen(3000, () => {
     console.log('Express Server is listening on port 3000...')
 })
+
+
+
+
+
+
+
+
+
+
 
 
 // From Code Louisville demonstration ROUTER
@@ -32,7 +40,7 @@ app.listen(3000, () => {
 
 // app.use(router)
 
-// app.listen(5000() => {
+// app.listen(5000, () => {
 //     console.log('express is now listening on port 5000')
 // })
 
@@ -46,6 +54,26 @@ app.listen(3000, () => {
 //     res.send('Any phrase will do')
 // })
 
-// app.listen(5000() => {
+// app.listen(5000, () => {
 //     console.log('express is now listening on port 5000')
+// })
+
+// // import expresss and path library
+// const express = require('express');
+// const path = require('path');
+
+// //store public folder path in a separate variable
+// let initial_path = path.join(__dirname, "public");
+
+// let app = express();
+// app.use(express.static(initial_path));
+
+// // setup home route to send index.html file
+// app.get('/', (req, res) => {
+//     res.sendFile(path.join(initial_path, "index.html"));
+// })
+
+// // local port where app will display
+// app.listen(3000, () => {
+//     console.log('Express Server is listening on port 3000...')
 // })
