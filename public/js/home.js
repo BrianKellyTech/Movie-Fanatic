@@ -51,12 +51,19 @@ const makeCards = (id, data) => {
             }
         }
 
-        //Pull in the images from TMDB
+        // Pull in the images from TMDB
         movieContainer.innerHTML += `
         <div class="movie">
             <img src="${img_url}${item.backdrop_path}" alt="Movie Poster">
             <p class="movie-title">${item.title}</p>
         </div>
         `;
+
+        // Movie card slider
+        if (i == data.length - 1) {
+            setTimeout(() => {
+                setupScrolling();
+            });
+        }
     })
 }
