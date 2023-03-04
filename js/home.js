@@ -52,8 +52,9 @@ const movieCards = (id, data) => {
         }
 
         // Pull in the images from TMDB
+        // On click, take the user to the about page
         movieContainer.innerHTML += `
-        <div class="movie">
+        <div class="movie" onclick="location.href = '/${item.id}'">
             <img src="${imageURL}${item.backdrop_path}" alt="Movie Poster">
             <p class="movie-title">${item.title}</p>
         </div>
