@@ -10,7 +10,7 @@
     width: 50%;
     height: 100%;
     background: rgb(24, 24, 24);
-    background: linear-gradient(90 deg, rgba(24, 24, 24, 1), rgba(24, 24, 24, 0) 100%);
+    background: linear-gradient(90deg, rgba(24, 24, 24, 1), rgba(24, 24, 24, 0) 100%);
     padding: 5vw;
     display: flex;
     flex-direction: column;
@@ -23,12 +23,12 @@
     font-weight: 500;
 }
 
-.genres {
+.movie-genres {
     opacity: 0.6;
     margin: 30px 0;
 }
 
-.des {
+.movie-description {
     width: 70%;
     line-height: 20px;
     margin-bottom: 30px;
