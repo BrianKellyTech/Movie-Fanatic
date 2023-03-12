@@ -40,5 +40,36 @@ const formatString = (currentIndex, maxIndex) => {
     return (currentIndex == maxIndex - 1) ? '' : ', ';
 }
 
+// Fetch movie cast info
 
+fetch(`${movieDetails}${movie_id}/credits?` + new URLSearchParams({
+    api_key: apiKeyTMDB
+}))
+    .then(res => res.json())
+    .then(data => {
+        const cast = document.querySelector('.starring');
+        for (let i = 0; i < 4; i++) {
+            cast.innerHTML += data.cast[i].name + formatString(i, 4);
+        }
+    })
+
+// Fetch movie trailers
+
+fetch(`${movieDetails}${movie_id}/videos?` + new URLSearchParams({
+    api_key: apiKeyTMDB
+}))
+    .then(res => res.json())
+    .then(data => {
+        let trailerContainer = document.querySelector('.trailer-container');
+        let maxClips = (data.results.length > 3) ? 3 : data.results.length;
+        // Use code from youtube to imbed the videos
+        for (let i = 0; i < maxClips; i++) {
+            trailerContainer.innerHTML += `
+        <iframe src="https://youtube.com/embed/${data.results[i].key}"
+        title="YouTube video player" frameborder="0" allow="accelerometer;
+        autoplay; clipboard-write; encrypted-media; gyroscope; 
+        picture-in-picture; web-share" allowfullscreen></iframe>
+        `;
+        }
+    })
 
