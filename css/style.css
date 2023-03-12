@@ -41,13 +41,6 @@ body {
     margin-left: auto;
 }
 
-/* Text on Navbar */
-.navbar-message {
-    display: flex;
-    color: white;
-    padding: 0 60px;
-}
-
 /* Navbar Buttons */
 .btn {
     border: 1px solid white;

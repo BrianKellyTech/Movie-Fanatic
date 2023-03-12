@@ -1,6 +1,7 @@
 let movie_id = location.pathname;
 
-// fetching movie details
+// Fetch movie details from TMDB.org API
+
 fetch(`${movieDetails}${movie_id}?` + new URLSearchParams({
     api_key: apiKeyTMDB
 }))
@@ -40,7 +41,7 @@ const formatString = (currentIndex, maxIndex) => {
     return (currentIndex == maxIndex - 1) ? '' : ', ';
 }
 
-// Fetch movie cast info
+// Fetch movie cast info from TMDB.org API
 
 fetch(`${movieDetails}${movie_id}/credits?` + new URLSearchParams({
     api_key: apiKeyTMDB
@@ -53,7 +54,7 @@ fetch(`${movieDetails}${movie_id}/credits?` + new URLSearchParams({
         }
     })
 
-// Fetch movie trailers
+// Fetch movie trailers from TMDB.org API
 
 fetch(`${movieDetails}${movie_id}/videos?` + new URLSearchParams({
     api_key: apiKeyTMDB
@@ -70,6 +71,27 @@ fetch(`${movieDetails}${movie_id}/videos?` + new URLSearchParams({
         autoplay; clipboard-write; encrypted-media; gyroscope; 
         picture-in-picture; web-share" allowfullscreen></iframe>
         `;
+        }
+    })
+
+// Fetch movie recommendations from TMDB.org API
+
+fetch(`${movieDetails}${movie_id}/recommendations?` + new URLSearchParams({
+    api_key: apiKeyTMDB
+}))
+    .then(res => res.json())
+    .then(data => {
+        let recommendationsContainer = document.querySelector('.recommendations-container');
+        for (let i = 0; i < 10; i++) {
+            if (data.results[i].backdrop_path == null) {
+                i++;
+            }
+            recommendationsContainer.innerHTML += `
+            <div class="movie" onclick="location.href = '/${data.results[i].id}'">
+            <img src="${imageURL}${data.results[i].backdrop_path}" alt="">
+            <p class="movie-title">${data.results[i].title}</p>
+            </div>
+            `;
         }
     })
 
