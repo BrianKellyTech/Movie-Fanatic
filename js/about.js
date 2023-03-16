@@ -82,7 +82,7 @@ fetch(`${movieDetails}${movie_id}/recommendations?` + new URLSearchParams({
     .then(res => res.json())
     .then(data => {
         let recommendationsContainer = document.querySelector('.recommendations-container');
-        for (let i = 0; i < 10; i++) {
+        for (let i = 0; i < 5; i++) {
             if (data.results[i].backdrop_path == null) {
                 i++;
             }

@@ -1,13 +1,13 @@
 .movie-info {
-  width: 100%;
-  height: calc(100vh - 60px);
-  margin-top: 60px;
-  background-size: cover;
-  background-repeat: no-repeat;  
+    width: 100%;
+    height: calc(100vh - 50px);
+    margin-top: 60px;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .movie-detail {
-    width: 50%;
+    width: 90%;
     height: 100%;
     background: rgb(24, 24, 24);
     background: linear-gradient(90deg, rgba(24, 24, 24, 1), rgba(24, 24, 24, 0) 100%);
@@ -39,29 +39,36 @@
 }
 
 .trailer-container,
-.recommendations {
+.recommendations-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     color: white;
-    padding: 5vw 5vw 0;
+    padding: 40px;
 }
 
 .heading {
+    display: flex;
     font-size: 30px;
     font-weight: 300;
-    margin-bottom: 20px;
+    margin-top: 30px;
+    justify-content: center;
 }
 
 iframe {
-    width: 400px;
+    width: 340px;
     height: 200px;
+    padding: 10px;
 }
 
 .recommendations-container {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    padding-bottom: 20px;
 }
 
-.movie p{
+.movie p {
     position: absolute;
     bottom: 30px;
     width: 100%;
@@ -69,9 +76,58 @@ iframe {
     line-height: 30px;
     background: rgba(0, 0, 0, 0.5);
     text-align: center;
-    opacity: 0;
+    opacity: unset;
 }
 
-.movie:hover p{
-    opacity: 1;
+
+/* Tablet Media Query */
+@media screen and (min-width:768px) {
+
+    .movie-detail {
+        width: 70%;
+    }
+
+    .movie-name {
+        font-size: 40px;
+    }
+
+    .heading {
+        font-size: 35px;
+    }
+
+    iframe {
+        width: 400px
+    }
+}
+
+
+/* Desktop Media Query */
+
+@media screen and (min-width:1024px) {
+
+    .movie-detail {
+        width: 50%;
+    }
+
+    .movie-name {
+        font-size: 50px;
+    }
+
+    .heading {
+        font-size: 40px;
+    }
+
+    iframe {
+        width: 400px
+    }
+
+    /* Movie title hover effect in desktop mode only */
+
+    .movie p {
+        opacity: 0;
+    }
+
+    .movie:hover p {
+        opacity: 1;
+    }
 }
