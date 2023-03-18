@@ -53,7 +53,7 @@ a {
 /* Navbar Buttons */
 .btn {
     border: none;
-    border-radius: 2px;
+    border-radius: 10px;
     background: none;
     color: white;
     height: 30px;

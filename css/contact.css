@@ -1,0 +1,147 @@
+/* Contact container styling */
+
+.contact-container {
+    display: flex;
+    height: 600px;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    margin-top: 150px;
+    margin-bottom: 80px;
+}
+
+/* Contact form styling*/
+
+form {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 60px;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+/* contact form header styling */
+
+form h3 {
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* contact form input field styling */
+
+form input,
+form textarea {
+    border: 0;
+    margin: 10px 0;
+    padding: 20px;
+    outline: none;
+    background: #e6e2e2;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+/* contact form button styling */
+
+.button {
+    padding: 15px;
+    background: blue;
+    color: #fff;
+    font-size: 18px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    width: 80px;
+    margin: 20px auto 0;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+/* Tablet Media Query */
+
+/* @media screen and (min-width:768px) { */
+
+
+/* Contact container styling */
+
+/* .contact-container {
+    height: 100vh;
+    margin-top: 80px;
+    margin-bottom: unset;
+} */
+
+/* contact form header styling */
+
+/* form h3 {
+    font-weight: 650;
+    font-size: 18px;
+} */
+
+/* contact form input field styling */
+
+/* form input,
+form textarea {
+    border: 0;
+    margin: 10px 0;
+    padding: 20px;
+    outline: none;
+    background: #e6e2e2;
+    font-size: 16px;
+    border-radius: 10px;
+} */
+
+/* contact form button styling */
+
+/* .button {
+    width: 90px;
+} */
+
+
+
+
+/* Desktop Media Query */
+
+/* @media screen and (min-width:1024px) { */
+
+
+/* Contact container styling */
+
+/* .contact-container {
+    height: 100vh;
+    margin-top: 80px;
+    margin-bottom: unset;
+} */
+
+/* contact form header styling */
+
+/* form h3 {
+    font-weight: 800;
+    font-size: 20px;
+} */
+
+/* contact form input field styling */
+
+/* form input,
+form textarea {
+    border: 0;
+    margin: 10px 0;
+    padding: 20px;
+    outline: none;
+    background: #e6e2e2;
+    font-size: 16px;
+    border-radius: 10px;
+} */
+
+/* contact form button styling */
+
+/* .button {
+    width: 100px;
+} */
