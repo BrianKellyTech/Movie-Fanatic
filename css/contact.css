@@ -1,5 +1,4 @@
 /* Contact container styling */
-
 .contact-container {
     display: flex;
     height: 600px;
@@ -11,7 +10,6 @@
 }
 
 /* Contact form styling*/
-
 form {
     background-color: black;
     display: flex;
@@ -22,8 +20,7 @@ form {
     border-radius: 10px;
 }
 
-/* contact form header styling */
-
+/* Contact form header styling */
 form h3 {
     color: white;
     font-weight: 500;
@@ -32,8 +29,7 @@ form h3 {
     margin-bottom: 20px;
 }
 
-/* contact form input field styling */
-
+/* Contact form input field styling */
 form input,
 form textarea {
     border: 0;
@@ -45,13 +41,33 @@ form textarea {
     border-radius: 10px;
 }
 
-/* contact form button styling */
+#name {
+    height: 30px;
+}
+
+#email {
+    height: 30px;
+}
+
+#phone {
+    height: 30px;
+}
+
+#zip {
+    height: 30px;
+}
+
+#message {
+    height: 150px;
+}
+
+/* Contact form button styling */
 
 .button {
     padding: 15px;
     background: blue;
     color: #fff;
-    font-size: 18px;
+    font-size: 14px;
     border: 0;
     outline: none;
     cursor: pointer;
@@ -61,87 +77,62 @@ form textarea {
 }
 
 
-
-
-
-
 /* Tablet Media Query */
 
-/* @media screen and (min-width:768px) { */
+@media screen and (min-width:768px) {
 
+    form h3 {
+        font-weight: 600;
+        font-size: 20px;
+    }
 
-/* Contact container styling */
+    #name {
+        height: 40px;
+    }
 
-/* .contact-container {
-    height: 100vh;
-    margin-top: 80px;
-    margin-bottom: unset;
-} */
+    #email {
+        height: 40px;
+    }
 
-/* contact form header styling */
+    #phone {
+        height: 40px;
+    }
 
-/* form h3 {
-    font-weight: 650;
-    font-size: 18px;
-} */
+    #zip {
+        height: 40px;
+    }
 
-/* contact form input field styling */
+    #message {
+        height: 175px;
+    }
+}
 
-/* form input,
-form textarea {
-    border: 0;
-    margin: 10px 0;
-    padding: 20px;
-    outline: none;
-    background: #e6e2e2;
-    font-size: 16px;
-    border-radius: 10px;
-} */
+/* Desktop Media Query  */
 
-/* contact form button styling */
+@media screen and (min-width:1024px) {
 
-/* .button {
-    width: 90px;
-} */
+    form h3 {
+        font-weight: 700;
+        font-size: 22px;
+    }
 
+    #name {
+        height: 50px;
+    }
 
+    #email {
+        height: 50px;
+    }
 
+    #phone {
+        height: 50px;
+    }
 
-/* Desktop Media Query */
+    #zip {
+        height: 50px;
+    }
 
-/* @media screen and (min-width:1024px) { */
-
-
-/* Contact container styling */
-
-/* .contact-container {
-    height: 100vh;
-    margin-top: 80px;
-    margin-bottom: unset;
-} */
-
-/* contact form header styling */
-
-/* form h3 {
-    font-weight: 800;
-    font-size: 20px;
-} */
-
-/* contact form input field styling */
-
-/* form input,
-form textarea {
-    border: 0;
-    margin: 10px 0;
-    padding: 20px;
-    outline: none;
-    background: #e6e2e2;
-    font-size: 16px;
-    border-radius: 10px;
-} */
-
-/* contact form button styling */
-
-/* .button {
-    width: 100px;
-} */
+    #message {
+        height: 200px;
+    }
+}

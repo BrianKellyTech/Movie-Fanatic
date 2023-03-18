@@ -1,5 +1,4 @@
 /* Site-wide Stying */
-
 * {
     margin: 0;
     padding: 0;
@@ -27,10 +26,11 @@ body {
 }
 
 /* Site Logo */
-
 a {
     height: 90%;
     width: 180px;
+    margin-right: 20px;
+    text-decoration: none;
     display: flex;
     align-items: center;
 }
@@ -38,7 +38,7 @@ a {
 .logo {
     height: 60%;
     width: 180px;
-} 
+}
 
 /* Navbar Container */
 .navbar-container {
@@ -62,7 +62,7 @@ a {
     cursor: pointer;
 }
 
-.account-btn {
+.contact-btn {
     background: blue;
     margin-right: 10px;
     font-size: 10px;
@@ -75,7 +75,7 @@ a {
     width: 60px;
 }
 
-/* Main Section */
+/* All text for the main section */
 .main {
     position: relative;
     margin-top: 60px;
@@ -84,7 +84,7 @@ a {
     color: white;
 }
 
-/* 'Movies' Title */
+/* Movie fanatic main h1 greeting */
 .main-heading {
     font-weight: 900;
     font-size: 30px;
@@ -121,7 +121,7 @@ a {
     height: 200px;
     display: flex;
     align-items: center;
-    /* Scrolling */
+    /* Container Scrolling */
     overflow-x: auto;
     overflow-y: hidden;
     scroll-behavior: smooth;
@@ -161,7 +161,7 @@ a {
     display: none;
 }
 
-/* main footer styling */
+/* Footer styling */
 
 .footer-container {
     background: black;
@@ -182,6 +182,10 @@ a {
 
 @media screen and (min-width:768px) {
 
+    a {
+        margin-right: unset;
+    }
+
     .logo {
         height: 80%;
         width: 300px;
@@ -197,7 +201,7 @@ a {
         width: unset;
     }
 
-    .account-btn {
+    .contact-btn {
         margin-right: unset;
         font-size: 12.5px;
         width: unset;
@@ -235,6 +239,10 @@ a {
 
 @media screen and (min-width:1024px) {
 
+    a {
+        margin-right: unset;
+    }
+
     .logo {
         height: 110%;
         width: 400px;
@@ -250,7 +258,7 @@ a {
         width: unset;
     }
 
-    .account-btn {
+    .contact-btn {
         margin-right: unset;
         font-size: 15px;
         width: unset;
@@ -283,7 +291,7 @@ a {
     }
 
     /* Buttons to scroll through movies (available only in desktop mode) */
-    
+
     .previous-btn,
     .next-btn {
         display: unset;

@@ -19,9 +19,7 @@
         <button class="btn sign-btn"
             onclick="alert(`This is not a functional button. It is for educational purposes only.`);">SIGN
             IN</button>
-        <button class="btn account-btn"
-            onclick="alert(`This is not a functional button. It is for educational purposes only.`);">CREATE
-            ACCOUNT</button>
+            <a href="contact.html"><button class="btn contact-btn">CONTACT US</button></a>
     </div>
 
 </nav>
@@ -33,7 +31,7 @@
             <input type="email" id="email" placeholder="Email" required>
             <input type="phone" id="phone" placeholder="Phone" required>
             <input type="zip" id="zip" placeholder="Zip Code" required>
-            <textarea name="message" rows="4" placeholder="Tell us what's up!"></textarea>
+            <textarea id="message" placeholder="Tell us what's up!"></textarea>
             <input type="submit" class="button" value="SEND" onclick="showMessage()" />
         </form>
     </div>

@@ -16,6 +16,11 @@ app.get('/:id', (req, res) => {
     res.sendFile(__dirname + '/about.html');
 })
 
+// Setup route to contact page
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/contact.html');
+})
+
 // Show message if route is invalid
 app.use((req, res) => {
     res.json("404 Not Found");
