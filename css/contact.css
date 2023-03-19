@@ -1,4 +1,5 @@
 /* Contact container styling */
+
 .contact-container {
     display: flex;
     height: 600px;
@@ -41,7 +42,7 @@ form textarea {
     border-radius: 10px;
 }
 
-#name {
+#username {
     height: 30px;
 }
 
@@ -61,13 +62,50 @@ form textarea {
     height: 150px;
 }
 
+/* Regular expression styling */
+#username-error {
+    color: red;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-top: 0;
+    margin-bottom: 24px;
+    display: none;
+}
+
+#email-error {
+    color: red;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-top: 0;
+    margin-bottom: 24px;
+    display: none;
+}
+
+#phone-error {
+    color: red;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-top: 0;
+    margin-bottom: 24px;
+    display: none;
+}
+
+#zip-error {
+    color: red;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-top: 0;
+    margin-bottom: 24px;
+    display: none;
+}
+
 /* Contact form button styling */
 
 .button {
     padding: 15px;
     background: blue;
     color: #fff;
-    font-size: 14px;
+    font-size: 15px;
     border: 0;
     outline: none;
     cursor: pointer;
@@ -81,12 +119,21 @@ form textarea {
 
 @media screen and (min-width:768px) {
 
+    body {
+        background-image: url(/img/theater.jpg);
+        background-size: cover;
+    }
+
+    form {
+        background-color: #181818;
+    }
+
     form h3 {
         font-weight: 600;
         font-size: 20px;
     }
 
-    #name {
+    #username {
         height: 40px;
     }
 
@@ -111,12 +158,21 @@ form textarea {
 
 @media screen and (min-width:1024px) {
 
+    body {
+        background-image: url(/img/theater.jpg);
+        background-size: cover;
+    }
+
+    form {
+        background-color: #181818;
+    }
+
     form h3 {
         font-weight: 700;
         font-size: 22px;
     }
 
-    #name {
+    #username {
         height: 50px;
     }
 

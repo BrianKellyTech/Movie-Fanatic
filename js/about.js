@@ -13,25 +13,21 @@ fetch(`${movieDetails}${movie_id}?` + new URLSearchParams({
 const movieHeroInfo = (data) => {
     const movieName = document.querySelector('.movie-name');
     const genres = document.querySelector('.movie-genres');
-    const des = document.querySelector('.movie-description');
+    const description = document.querySelector('.movie-description');
     const title = document.querySelector('title');
     const backdrop = document.querySelector('.movie-info-container');
 
     title.innerHTML = movieName.innerHTML = data.title;
-    genres.innerHTML = `${data.release_date.split('-')[0]} | `;
+    genres.innerHTML = `${data.release_date.split('-')[0]}: `;
     for (let i = 0; i < data.genres.length; i++) {
         genres.innerHTML += data.genres[i].name + formatString(i, data.genres.length);
     }
-
-    // if (data.adult == true) {
-    //     genres.innerHTML += ' | +18';
-    // }
 
     if (data.backdrop_path == null) {
         data.backdrop_path = data.poster_path;
     }
 
-    des.innerHTML = data.overview;
+    description.innerHTML = data.overview;
 
     backdrop.style.backgroundImage = `url(${hiresImageURL}${data.backdrop_path})`;
 }

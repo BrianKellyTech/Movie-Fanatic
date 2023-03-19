@@ -296,8 +296,8 @@ a {
     .next-btn {
         display: unset;
         position: absolute;
-        height: 200px;
-        top: 50%;
+        height: 180px;
+        top: 55%;
         transform: translateY(-50%);
         width: 2.5vw;
         background: #181818;

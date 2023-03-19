@@ -1,6 +1,6 @@
 const main = document.querySelector('.main');
 
-//Fetch movie data from the API and make into JSON
+// Fetch movie data from the API and make into JSON
 fetch(genreListURL + new URLSearchParams({
     api_key: apiKeyTMDB
 }))
@@ -11,12 +11,12 @@ fetch(genreListURL + new URLSearchParams({
         })
     });
 
-//Random function to get fetch random page between between 1 and 3
+// Fetch movies from TMDB by Genre and ID
 const moviesList = (id, genres) => {
     fetch(movieGenreURL + new URLSearchParams({
         api_key: apiKeyTMDB,
-        with_genres: id,
-        page: Math.floor(Math.random() * 3) + 1
+        with_genres: id
+        // page: Math.floor(Math.random() * 3) + 1
     }))
         .then(res => res.json())
         .then(data => {
@@ -25,7 +25,7 @@ const moviesList = (id, genres) => {
         .catch(err => console.log(err));
 }
 
-//Bring in 'main' from the HTML
+// Bring in 'main' from the HTML and add movies and button images
 const makeCategoryElement = (category, data) => {
     main.innerHTML += `
 <div class="movie-list">
@@ -39,7 +39,7 @@ const makeCategoryElement = (category, data) => {
     movieCards(category, data);
 }
 
-/* Check to make sure the image is received from TMDB. It uses both 'backdrop_path' and 'poster_path' for somne stupid reason.
+/* Check to make sure the image is received from TMDB. It uses both 'backdrop_path' and 'poster_path' for some stupid reason.
    Check for both and skip if neither is found */
 const movieCards = (id, data) => {
     const movieContainer = document.getElementById(id);
@@ -51,8 +51,8 @@ const movieCards = (id, data) => {
             }
         }
 
-        // Pull in the images from TMDB
-        // On click, take the user to the about page
+        /* Pull in the images from TMDB and show movie names beneath the container
+           On click, take the user to the about page */
         movieContainer.innerHTML += `
         <div class="movie" onclick="location.href = '/${item.id}'">
             <img src="${imageURL}${item.backdrop_path}" alt="Movie Poster">
@@ -60,7 +60,27 @@ const movieCards = (id, data) => {
         </div>
         `;
 
-        // Movie card slider
+        // Target the 'movie-container' holding all the movie images and add scrolling and buttons
+        const scrollBar = () => {
+            const container = [...document.querySelectorAll('.movie-container')];
+            const nextBtn = [...document.querySelectorAll('.next-btn')];
+            const previousBtn = [...document.querySelectorAll('.previous-btn')];
+
+            // Use getBoundingClientRect to return the containers dimensions for manipulation
+            container.forEach((item, i) => {
+                let containerDimensions = item.getBoundingClientRect();
+                let containerWidth = containerDimensions.width;
+
+                nextBtn[i].addEventListener('click', () => {
+                    item.scrollLeft += containerWidth;
+                })
+
+                previousBtn[i].addEventListener('click', () => {
+                    item.scrollLeft -= containerWidth;
+                })
+            })
+        }
+        // Movie card slider, will stop the scrolling function once the end of the array is reached
         if (slider == data.length - 1) {
             setTimeout(() => {
                 scrollBar();
