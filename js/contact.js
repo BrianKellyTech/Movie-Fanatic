@@ -1,5 +1,4 @@
 // Regular expressions for contact form
-
 const username = document.getElementById('username');
 const email = document.getElementById('email');
 const phone = document.getElementById('phone');

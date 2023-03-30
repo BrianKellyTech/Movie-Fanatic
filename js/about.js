@@ -1,7 +1,6 @@
 let movie_id = location.pathname;
 
 // Fetch movie details from TMDB.org API
-
 fetch(`${movieDetails}${movie_id}?` + new URLSearchParams({
     api_key: apiKeyTMDB
 }))
@@ -38,7 +37,6 @@ const formatString = (currentIndex, maxIndex) => {
 }
 
 // Fetch movie cast info from TMDB.org API
-
 fetch(`${movieDetails}${movie_id}/credits?` + new URLSearchParams({
     api_key: apiKeyTMDB
 }))
@@ -51,7 +49,6 @@ fetch(`${movieDetails}${movie_id}/credits?` + new URLSearchParams({
     })
 
 // Fetch movie trailers from TMDB.org API
-
 fetch(`${movieDetails}${movie_id}/videos?` + new URLSearchParams({
     api_key: apiKeyTMDB
 }))
@@ -71,7 +68,6 @@ fetch(`${movieDetails}${movie_id}/videos?` + new URLSearchParams({
     })
 
 // Fetch movie recommendations from TMDB.org API
-
 fetch(`${movieDetails}${movie_id}/recommendations?` + new URLSearchParams({
     api_key: apiKeyTMDB
 }))

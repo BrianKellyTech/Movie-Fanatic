@@ -1,6 +1,6 @@
 const main = document.querySelector('.main');
 
-// Fetch movie data from the API and make into JSON
+// Fetch movie data from the API and convert to JSON
 fetch(genreListURL + new URLSearchParams({
     api_key: apiKeyTMDB
 }))
@@ -16,7 +16,6 @@ const moviesList = (id, genres) => {
     fetch(movieGenreURL + new URLSearchParams({
         api_key: apiKeyTMDB,
         with_genres: id
-        // page: Math.floor(Math.random() * 3) + 1
     }))
         .then(res => res.json())
         .then(data => {
@@ -39,8 +38,8 @@ const makeCategoryElement = (category, data) => {
     movieCards(category, data);
 }
 
-/* Check to make sure the image is received from TMDB. It uses both 'backdrop_path' and 'poster_path' for some stupid reason.
-   Check for both and skip if neither is found */
+/* Check to make sure the image is received from TMDB. Per their documentation, tt uses both 'backdrop_path' and 'poster_path'
+for some stupid reason. Check for both and skip if neither is found */
 const movieCards = (id, data) => {
     const movieContainer = document.getElementById(id);
     data.forEach((item, slider) => {
